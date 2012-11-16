@@ -215,25 +215,23 @@ iframe
 >>>>>>>>>>>>> GALLERY
 */
 
-.gallery-pic
+$thumbnail-height: 200px;
+$thumbnail-width: 200px;
+
+div.gallery-pic
 {
-
-	$thumbnail-height: 200px;
-	$thumbnail-width: 200px;
-
-	img
-	{
-		height: $thumbnail-height;
-	}
-
-	div &
-	{
-		height: $thumbnail-height;
-		width: $thumbnail-width;
-		overflow: hidden;
-		text-align:center;
-		
-		float:left;
-		margin: 0.25em;
-	}
+	height: $thumbnail-height;
+	width: $thumbnail-width;
+	overflow: hidden;
+	text-align:center;
+	
+	float:left;
+	margin: 0.25em;
 }
+/*
+
+.gallery-pic img
+{
+	height: $thumbnail-height;
+}
+*/

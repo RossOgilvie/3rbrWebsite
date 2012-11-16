@@ -49,27 +49,51 @@ if (is_dir($dir0) && $dh0 = opendir($dir0))
 <?php include("nav-menu.html"); ?>
 
 <div class="content">
-
 <?php
 foreach($groups as $group)
 {
-	//echo "<h2>$group</h2>\n";
-	//echo "<ul>\n";
 	foreach($pics[$group] as $pic)
 	{
 		echo "<div class='gallery-pic'><a href='photos/$group/$pic' rel='lightbox[all]'><img src='images/grey.gif' data-original='photos/$group/$pic' class='gallery-pic' alt='thumbnail' /></a></div>\n";
 	}
-	//echo "</ul>\n";
 }
 ?>
 </div>
 
 <script type="text/javascript" charset="utf-8">
 $(function() {
-	$("img").lazyload({
-		effect : "fadeIn",
-	});
+	$("img").lazyload({	effect : "fadeIn"});
+	$("img[data-original]").attr('onload', "crop_correctly($(this));");
 });
+
+function crop_correctly(img)
+{
+	var newImg = new Image();
+
+    newImg.onload = function() {
+		var height = newImg.height;
+		var width = newImg.width;
+		var ratio = height/width;
+		// we only want to do this when we load the real image, not the placeholder
+		if(img.attr("src")!="images/grey.gif")
+			if(height >= width) 
+			{
+				img.css("width","200px");
+				img.css("height",Math.round(200*ratio) + "px");
+				img.css("margin-top", "-25%");
+				img.css("margin-left", "0");
+			}
+			else
+			{
+				img.css("height","200px");
+				img.css("width",Math.round(200/ratio) + "px");
+				img.css("margin-left", "-25%");
+				img.css("margin-top", "0");
+			}
+    }
+
+    newImg.src = img.attr("src");
+}
   </script>
 </body>
 </html>

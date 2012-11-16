@@ -84,19 +84,12 @@ iframe
 >>>>>>>>>>>>> SITE HEADER
 */
 
-#site-header-background {
-    height: 85px;
-    margin-bottom: -85px;
-    background-color: #4B98EB;
-    margin-top: 0;
-    margin-left: 0;
-}
-
 #site-header h1 {
-    margin-top: 0;
+    margin: 0;
     padding-top: 0.5em;
     text-align:center;
     color: #FFFFFF;
+    background-color: #4B98EB;
 }
 
 #rbr-logo {
@@ -117,8 +110,8 @@ iframe
 
 #nav-menu {
     background-color:#4B98EB;
-    border-radius: 0 0 15px 15px;
-    padding: 10px;
+    border-radius: 0 0 1em 1em;
+    padding: 0.5em;
     margin-bottom: 1em;
 }
 
@@ -139,7 +132,7 @@ iframe
 {
 	display:block;
 	color:#FFFFFF;
-	padding:4px;
+	padding: 0.5em;
 	text-decoration:none;
 }
 
@@ -169,7 +162,7 @@ iframe
 	width: 10.5em;
 
 	background-color:#4B98EB;
-	border-radius: 0 15px 15px 0;
+	border-radius: 0 1em 1em 0;
 	padding: 1em;
 }
 
@@ -185,7 +178,7 @@ iframe
 {
 	display:block;
 	color:#FFFFFF;
-	padding:4px;
+	padding:0.5em;
 	text-decoration:none;
 	cursor:pointer
 }

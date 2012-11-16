@@ -1,9 +1,6 @@
-<?php include("doctype.html"); ?>
-<html>
-<head>
-<title>Contact Us | 3rd Rose Bay Rovers</title>
+<?php include("doctype-html-head.html"); ?>
 
-<?php include("head.html") ?>
+<title>Contact Us | 3rd Rose Bay Rovers</title>
 </head>
 
 <body>

@@ -1,4 +1,4 @@
-<?php include("start.html"); ?>
+<?php include("doctype-html-head.html"); ?>
 
 <title>About Us | 3rd Rose Bay Rovers</title>
 </head>

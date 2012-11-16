@@ -1,9 +1,7 @@
-<?php include("doctype.html"); ?>
-<html>
-<head>
+<?php include("doctype-html-head.html"); ?>
+
 <title>Documents | 3rd Rose Bay Rovers</title>
 
-<?php include("head.html") ?>
 <?php
 // Get the names of all rovers with a profile
 $groups=array();

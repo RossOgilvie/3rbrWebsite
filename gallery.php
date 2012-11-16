@@ -1,9 +1,6 @@
-<?php include("doctype.html"); ?>
-<html>
-<head>
-<title>Photo Gallery | 3rd Rose Bay Rovers</title>
+<?php include("doctype-html-head.html"); ?>
 
-<?php include("head.html") ?>
+<title>Photo Gallery | 3rd Rose Bay Rovers</title>
 
 <script src="js/jquery-1.7.2.min.js"></script>
 <script src="js/lightbox.js"></script>
@@ -60,7 +57,7 @@ foreach($groups as $group)
 	//echo "<ul>\n";
 	foreach($pics[$group] as $pic)
 	{
-		echo "<div class='gallery-pic-div'><a href='photos/$group/$pic' rel='lightbox[all]'><img src='images/grey.gif' data-original='photos/$group/$pic' class='gallery-pic-img'/></a></div>\n";
+		echo "<div class='gallery-pic-div'><a href='photos/$group/$pic' rel='lightbox[all]'><img src='images/grey.gif' data-original='photos/$group/$pic' class='gallery-pic-img' alt='thumbnail' /></a></div>\n";
 	}
 	//echo "</ul>\n";
 }

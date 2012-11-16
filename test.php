@@ -1,9 +1,6 @@
-<?php include("doctype.html"); ?>
-<html>
-<head>
-<title> | 3rd Rose Bay Rovers</title>
+<?php include("doctype-html-head.html"); ?>
 
-<?php include("head.html") ?>
+<title>Test | 3rd Rose Bay Rovers</title>
 
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 

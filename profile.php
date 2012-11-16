@@ -1,9 +1,6 @@
-<?php include("doctype.html"); ?>
-<html>
-<head>
-<title>Profiles | 3rd Rose Bay Rovers</title>
+<?php include("doctype-html-head.html"); ?>
 
-<?php include("head.html") ?>
+<title>Profiles | 3rd Rose Bay Rovers</title>
 
 <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="js/marked.js"></script>
@@ -101,7 +98,7 @@ sort($booted);
 <div id="profile-box-wrapper">
 	<div id="profile-box">
 		<div id="profile-pic">
-			<img id="profile-pic-img" src="" />
+			<img id="profile-pic-img" alt="Profile Picture" />
 		</div>
 
 		<div id="profile-bio">
@@ -123,10 +120,12 @@ foreach($rovers as $rover)
 if(count($booted) != 0)
 {
 	echo "<hr />";
+	//echo "<ul>";
 	foreach($booted as $boot)
 	{
 		echo "<li><a onClick='window.location.hash = \"$boot\";'>$boot</a></li>\n";
 	}
+	//echo "</ul>";
 }
 ?>
 </ul>

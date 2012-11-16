@@ -12,17 +12,17 @@ if (is_dir($dir0) && $dh0 = opendir($dir0))
 {  
 	while (($dir1 = readdir($dh0)) !== false)  
 	{
-		//for all the nontrivial folders in it, loop through their files
-		if(is_dir($dir0."/".$dir1) && $dir1 != "." && $dir1 != ".." && $dh1 = opendir($dir0."/".$dir1))
+		//for all the nontrivial and nonhidden folders in it, loop through their files
+		if(is_dir($dir0."/".$dir1) && $dir1[0] != "." && $dh1 = opendir($dir0."/".$dir1))
 		{
-			//add the nontrivial folder to the list of groups
+			//add the good folder to the list of groups
 			$groups[] = $dir1;
 			//prep an array to hold all the files belonging to this group
 			$docs[$dir1]=array();
 			while (($file = readdir($dh1)) !== false)  
 			{
 				//again filter the crap files
-				if($file != "." && $file != "..")
+				if($file[0] != ".")
 				{
 					//add the real files to the list of docs, indexed by their group
 					$docs[$dir1][] = $file;

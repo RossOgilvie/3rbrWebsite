@@ -19,7 +19,7 @@ if (is_dir($dir0) && $dh0 = opendir($dir0))
 	while (($dir1 = readdir($dh0)) !== false)  
 	{
 		//for all the nontrivial folders in it, loop through their files
-		if(is_dir($dir0."/".$dir1) && $dir1 != "." && $dir1 != ".." && $dh1 = opendir($dir0."/".$dir1))
+		if(is_dir($dir0."/".$dir1) && $dir1[0] != "." && $dh1 = opendir($dir0."/".$dir1))
 		{
 			//add the nontrivial folder to the list of groups
 			$groups[] = $dir1;
@@ -28,7 +28,7 @@ if (is_dir($dir0) && $dh0 = opendir($dir0))
 			while (($file = readdir($dh1)) !== false)  
 			{
 				//again filter the crap files
-				if($file != "." && $file != "..")
+				if($file[0] != ".")
 				{
 					//add the real files to the list of docs, indexed by their group
 					$pics[$dir1][] = $file;

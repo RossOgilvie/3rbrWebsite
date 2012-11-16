@@ -1,0 +1,239 @@
+@import "http://fonts.googleapis.com/css?family=Cinzel:700";
+
+/*
+>>>>>>>>>>>>> HACKS
+*/
+
+html, body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%
+}
+
+/*
+use sane css boxing model
+*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*
+get rid of outline boxes after selecting an element. technically has bad accessibility implications 
+*/
+:focus {
+	outline:0;
+}
+
+/*
+tweaks for superscripts
+*/
+sup {
+ vertical-align: baseline;
+ position: relative;
+ top: -0.4em;
+ }
+
+/*
+>>>>>>>>>>>>>>>> MIXINS && GLOBALS
+*/
+
+$primary-colour: #4B98EB;
+
+@mixin links($color, $decoration-normal, $decoration-hover)
+{
+	&, &:visited
+	{
+		color:$color;
+		text-decoration:$decoration-normal;
+	}
+
+	&:hover
+	{
+		text-decoration:$decoration-hover;
+	}
+} 
+
+/*
+>>>>>>>>>>>>> SITEWIDE
+*/
+
+h1 {
+	font-family: 'Cinzel', serif;
+}
+
+h2, h3, body {
+	font-family: Verdana, sans-serif;
+}
+
+a {@include links(black, underline, underline);}
+
+iframe
+{
+	border:0;
+	margin:0;
+	padding:0;
+	width: 100%;
+	height: 100%
+}
+
+.content {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+.embedded-map
+{
+	width: 640px;
+	height: 480px;
+	margin:0 auto;
+}
+
+#calendar-container
+{
+	width: 100%;
+	height: 600px;
+	text-align: center;
+}
+
+/*
+>>>>>>>>>>>>> SITE HEADER
+*/
+
+#site-header h1 {
+    margin: 0;
+    padding-top: 0.5em;
+    text-align:center;
+    color: #FFFFFF;
+    background-color: $primary-colour;
+}
+
+#rbr-logo {
+	float: left;
+	height: 80px;
+	margin-left: 1em;
+}
+
+#rover-logo {
+	float: right;
+	height: 80px;
+	margin-right: 1em;
+}
+
+/*
+>>>>>>>>>>>>> NAV MENU
+*/
+
+#nav-menu
+{
+    background-color: $primary-colour;
+    border-radius: 0 0 1em 1em;
+    padding: 0.5em;
+    margin-bottom: 1em;
+
+	ul
+	{
+		list-style-type:none;
+		margin:0;
+		padding:0;
+		text-align: center;
+	}
+
+	li
+	{
+		display:inline-block;
+	}
+
+	a
+	{
+		@include links(#FFFFFF, none, underline);
+
+		&:link, &:visited
+		{
+			display:block;
+			padding: 0.5em;
+		}
+	}
+}
+/*
+>>>>>>>>>>>>> PROFILES
+*/
+#profile-box-wrapper
+{
+	float: left;
+	width: 100%;
+}
+
+#profile-box
+{
+	margin-left: 11.5em;
+	padding: 0.5em;
+}
+
+#profile-menu {
+	float: left;
+	margin-left:-100%;
+	width: 10.5em;
+
+	background-color:#4B98EB;
+	border-radius: 0 1em 1em 0;
+	padding: 1em;
+
+	ul
+	{
+		float:left;
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
+
+	a
+	{
+		display:block;
+		padding:0.5em;
+		cursor:pointer;
+
+		@include links(white, none, underline);
+	}
+}
+
+#profile-pic
+{
+	float: right;
+	width: 15em;
+	margin-top: 1em;
+	margin-left: 0.5em;
+}
+
+#profile-pic-img
+{
+	display:none;
+	width:100%;
+}
+
+/*
+>>>>>>>>>>>>> GALLERY
+*/
+
+.gallery-pic
+{
+
+	$thumbnail-height: 200px;
+	$thumbnail-width: 200px;
+
+	img
+	{
+		height: $thumbnail-height;
+	}
+
+	div &
+	{
+		height: $thumbnail-height;
+		width: $thumbnail-width;
+		overflow: hidden;
+		text-align:center;
+		
+		float:left;
+		margin: 0.25em;
+	}
+}

@@ -57,7 +57,7 @@ foreach($groups as $group)
 	//echo "<ul>\n";
 	foreach($pics[$group] as $pic)
 	{
-		echo "<div class='gallery-pic-div'><a href='photos/$group/$pic' rel='lightbox[all]'><img src='images/grey.gif' data-original='photos/$group/$pic' class='gallery-pic-img' alt='thumbnail' /></a></div>\n";
+		echo "<div class='gallery-pic'><a href='photos/$group/$pic' rel='lightbox[all]'><img src='images/grey.gif' data-original='photos/$group/$pic' class='gallery-pic' alt='thumbnail' /></a></div>\n";
 	}
 	//echo "</ul>\n";
 }

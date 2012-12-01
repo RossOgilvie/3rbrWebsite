@@ -96,6 +96,11 @@ iframe
 	text-align: center;
 }
 
+.center
+{
+	text-align: center;
+}
+
 /*
 >>>>>>>>>>>>> SITE HEADER
 */
@@ -225,7 +230,7 @@ div.gallery-pic
 	overflow: hidden;
 	text-align:center;
 	
-	float:left;
+	display:inline-block;
 	margin: 0.25em;
 }
 /*

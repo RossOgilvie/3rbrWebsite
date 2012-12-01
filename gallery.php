@@ -48,7 +48,7 @@ if (is_dir($dir0) && $dh0 = opendir($dir0))
 <?php include("site-header.html"); ?>
 <?php include("nav-menu.html"); ?>
 
-<div class="content">
+<div class="content center">
 <?php
 foreach($groups as $group)
 {

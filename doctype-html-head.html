@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="UTF-8" />
+
+<?php
+//This gives the stylesheet a time code to guard against browser caching
+$tstamp='?t=' . filemtime('css/site-wide.css');
+echo "<link type=\"text/css\" rel=\"stylesheet\" href=\"css/site-wide.css$tstamp\" />\n";
+?>

@@ -2,7 +2,7 @@
 
 <title>Photo Gallery | 3rd Rose Bay Rovers</title>
 
-<script src="js/jquery-1.7.2.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="js/lightbox.js"></script>
 <link href="css/lightbox.css" rel="stylesheet" />
 

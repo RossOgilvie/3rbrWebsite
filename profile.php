@@ -2,7 +2,7 @@
 
 <title>Profiles | 3rd Rose Bay Rovers</title>
 
-<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/marked.js"></script>
 <script type="text/javascript">
 //detect hash change and then 
@@ -33,7 +33,8 @@ function switch_profile(name)
 
 	// retrieve the file at "profile_path.profile" = "profile/Ross Ogilvie.profile"
 	// the $.now() bit is to make unique requests and avoid caching
-	$.get(profile_path + ".profile", { "_": $.now() }, function(profile_content)
+	//$.get(profile_path + ".profile", { "_": $.now() }, function(profile_content)
+	$.get(profile_path + ".profile", function(profile_content)
 	{
 		//if we succeed, parse it as markdown, and load it into "#profile-div"
 		$('#profile-bio').html(marked(profile_content));

@@ -11,18 +11,18 @@ The profiles page (profile.php), the documents page (docs.php), and the gallery 
 
 ### Dynamic Pages: Profiles
 The profiles page content is perhaps the most complicated. It loads content from the directory called "profiles". A profile consists of two files, a .profile and a picture. The former is simply a text document written using "markdown" syntax (the same syntax as this document). The latter is a picture file in png or jpg format. Pictures are best if they are portrait and approximately 400px wide. Both files should be named with the full name of the rover. For example
-Joe Smith.profile
-Joe Smith.png
+- Joe Smith.profile
+- Joe Smith.png
 
-Instructions on how markdown works can be found [here](http://daringfireball.net/projects/markdown/basics.)
+Instructions on how markdown works can be found [here](http://daringfireball.net/projects/markdown/basics).
 
 Booted Rovers are collected in a second list. They should be name with a .booted before the file extension
-Joe Smith.booted.profile
-Joe Smith.booted.png
+- Joe Smith.booted.profile
+- Joe Smith.booted.png
 
 Finally, if you wish a profile to be still available, but not shown in the list on the profiles page, used a .hidden
-Joe Smith.hidden.profile
-Joe Smith.hidden.png
+- Joe Smith.hidden.profile
+- Joe Smith.hidden.png
 
 ### Dynamic Pages: Documents
 Items listed on the docs.php page are drawn from documents folder. Additionally, each document must be sorted into a subfolder that gives its grouping on the page. For example, the folder structure might look like this

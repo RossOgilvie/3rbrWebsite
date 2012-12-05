@@ -9,7 +9,7 @@
 
 <div class="content">
 <div id="calendar-container">
-	<iframe id="calender" src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=3rbrsecretary%40gmail.com&amp;color=%23A32929&amp;ctz=Australia%2FSydney"></iframe>
+	<iframe id="calender" src="https://www.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=3rbrsecretary%40gmail.com&amp;color=%23A32929&amp;ctz=Australia%2FSydney"></iframe>
 </div>
 
 <div style="text-align: center">

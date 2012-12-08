@@ -46,7 +46,6 @@ if (is_dir($dir0) && $dh0 = opendir($dir0))
 
 <body>
 <?php include("site-header.html"); ?>
-<?php include("nav-menu.html"); ?>
 
 <div class="content center">
 <?php

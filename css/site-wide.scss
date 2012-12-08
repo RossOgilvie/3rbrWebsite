@@ -105,15 +105,19 @@ iframe
 >>>>>>>>>>>>> SITE HEADER
 */
 
-#site-header h1 {
-    margin: 0;
-    padding-top: 0.5em;
-    text-align:center;
-    color: #FFFFFF;
+#site-header {
     background-color: $primary-colour;
+    border-radius: 0 0 1em 1em;
+    
+	h1 {
+		margin: 0;
+		padding-top: 0.5em;
+		text-align:center;
+		color: #FFFFFF;
+	}
 }
 
-#rbr-logo {
+#crew-logo {
 	float: left;
 	height: 80px;
 	margin-left: 1em;
@@ -125,14 +129,8 @@ iframe
 	margin-right: 1em;
 }
 
-/*
->>>>>>>>>>>>> NAV MENU
-*/
-
 #nav-menu
 {
-    background-color: $primary-colour;
-    border-radius: 0 0 1em 1em;
     padding: 0.5em;
     margin-bottom: 1em;
 
@@ -180,7 +178,7 @@ iframe
 	margin-left:-100%;
 	width: 11em;
 
-	background-color:#4B98EB;
+	background-color:$primary-colour;
 	border-radius: 0 1em 1em 0;
 	padding: 1em;
 
@@ -233,10 +231,3 @@ div.gallery-pic
 	display:inline-block;
 	margin: 0.25em;
 }
-/*
-
-.gallery-pic img
-{
-	height: $thumbnail-height;
-}
-*/

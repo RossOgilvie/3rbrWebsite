@@ -22,7 +22,6 @@ function fade_in_pic() {
 
 <body>
 <?php include("site-header.html"); ?>
-<?php include("nav-menu.html"); ?>
 
 <div class="content">
 <img id="pic" src="images/3rbr_shield_transparent.png" height="400px" />

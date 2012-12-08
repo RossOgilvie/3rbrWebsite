@@ -5,7 +5,6 @@
 
 <body>
 <?php include("site-header.html"); ?>
-<?php include("nav-menu.html"); ?>
 
 <div class="content">
 I'm sorry, the page you requested was not found.

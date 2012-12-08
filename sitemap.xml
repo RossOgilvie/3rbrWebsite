@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>http://rosebayrovers.org.au/</loc>
+      <lastmod>2012-12-01</lastmod>
+      <changefreq>monthly</changefreq>
+   </url>
+   <url>
+      <loc>http://rosebayrovers.org.au/about</loc>
+   </url>
+   <url>
+      <loc>http://rosebayrovers.org.au/calendar</loc>
+   </url>
+   <url>
+      <loc>http://rosebayrovers.org.au/profile</loc>
+   </url>
+   <url>
+      <loc>http://rosebayrovers.org.au/docs</loc>
+   </url>
+   <url>
+      <loc>http://rosebayrovers.org.au/gallery</loc>
+   </url>
+   <url>
+      <loc>http://rosebayrovers.org.au/contact</loc>
+      <changefreq>yearly</changefreq>
+   </url>
+</urlset>

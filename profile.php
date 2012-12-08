@@ -94,7 +94,6 @@ sort($booted);
 
 <body onload="check_url_hash();">
 <?php include("site-header.html"); ?>
-<?php include("nav-menu.html"); ?>
 
 <div id="profile-box-wrapper">
 	<div id="profile-box">

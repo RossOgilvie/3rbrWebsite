@@ -45,6 +45,12 @@ DirectoryIndex calendar.php
   # RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}\.php -f
   RewriteRule ^(.*)$ $1.php
+  
+  ## Move old pages to new ones so as not to break links
+  RewriteRule aboutus$ /about [R=301]
+  RewriteRule booted$ /profile [R=301]
+  RewriteRule who$ /profile [R=301]
+  RewriteRule node/116$ /docs [R=301]
 
   # Rules to correctly serve gzip compressed CSS and JS files.
   # Requires both mod_rewrite and mod_headers to be enabled.

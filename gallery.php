@@ -39,7 +39,7 @@ if (is_dir($dir0) && $dh0 = opendir($dir0))
 		}
 	}  
 	closedir($dh0);
-	sort($groups);
+	rsort($groups);
 }
 ?>
 </head>

@@ -39,6 +39,14 @@
 
 <p><strong>Webmaster</strong><br />
 <a href="profile#Ross Ogilvie">Ross Ogilvie</a>: webmaster@rosebayrovers.org.au</p>
+
+<h2>Other Rover Crews in the Area</h2>
+<a href="http://abbotsfordrovers.org.au"><img src="images/abbotsford_crew_logo.jpg" height=150></a>
+<a href="http://coogeerovers.org.au"><img src="images/coogee_crew_logo.png" height=150></a>
+<!--
+<a href="http://rosebayrovers.org.au"><img src="images/rosebay_crew_logo.png" height=150></a>
+-->
+<a href="http://www.nsw.rovers.com.au/"><img src="images/rover_logo.png" height=150></a>
 </div>
 </body>
 </html>

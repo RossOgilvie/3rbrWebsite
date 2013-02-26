@@ -30,6 +30,10 @@ function switch_profile(name)
 		profile_path='profiles/' + name + '.booted';
 	else if(url_exists('profiles/' + name + '.hidden.profile'))
 		profile_path='profiles/' + name + '.hidden';
+	else
+		//if there is no such profile, say so
+		$('#profile-bio').html("No such profile :(");
+		
 
 	// retrieve the file at "profile_path.profile" = "profile/Ross Ogilvie.profile"
 	// the $.now() bit is to make unique requests and avoid caching

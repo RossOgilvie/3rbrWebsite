@@ -18,7 +18,7 @@ function check_url_hash() {
 function switch_profile(name)
 {
 	// have cool nickname translation
-	var nicknames = {Awesome:"Ross Ogilvie", awesome:"Ross Ogilvie"};
+	var nicknames = {Awesome:"Ross Ogilvie", awesome:"Ross Ogilvie", lammy:"Lauren Scott"};
 	if(name in nicknames) name = nicknames[name];
 	
 	// Some profiles have names like Nick Wolf.booted.profile. Try to match an ordinary type, then fall back to the other types

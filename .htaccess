@@ -9,7 +9,7 @@ Options -Indexes
 Options +FollowSymLinks
 
 # Handle any 404 errors.
-ErrorDocument 404 /404.php
+ErrorDocument 404 /builder.php?page=404.php
 
 # Set the default handler.
 DirectoryIndex calendar.php

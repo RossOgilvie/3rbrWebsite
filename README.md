@@ -48,4 +48,4 @@ Some pages on the site are static. Specifically the about page (about.php) and t
 There are three common snippets. "doctype-html-head.html" does some technically important things and also loads the website's theme. "site-header.html" is exactly what is sounds like, it has the website's heading and two logo pictures. "nav-menu.html" has a list of links to the pages of the website.
 
 ### Configuration tricks
-The server is set up to assume that pages without a file extension should be given a .php extension. For example, going to yoursite.com/calendar shows the page yoursite.com/calendar.php . You can use this feature to make nicer looking urls.
+As mentioned at the start, magical mod_rewrite rules are in effect. The server is set up to assume that pages without a file extension should be given a .php extension. For example, yoursite.com/calendar is rewritten to yoursite.com/calendar.php. Next a rule matches pages ending in php and redirects them to the builder script -> yoursite.com/builder.php?page=calendar.php . You can use this feature to make nicer looking urls.

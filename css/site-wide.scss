@@ -4,10 +4,16 @@
 >>>>>>>>>>>>> HACKS
 */
 
-html, body {
+html{
   border: 0;
   margin: 0;
   padding: 0;
+  height: 100%
+}
+body {
+  border: 0;
+  margin: 0;
+  padding-top: 10em;
   height: 100%
 }
 
@@ -108,6 +114,9 @@ iframe
 #site-header {
     background-color: $primary-colour;
     border-radius: 0 0 1em 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
     
 	h1 {
 		margin: 0;
@@ -132,7 +141,7 @@ iframe
 #nav-menu
 {
     padding: 0.5em;
-    margin-bottom: 1em;
+    margin-bottom: 0em;
 /*
     background-color: $primary-colour;
     border-radius: 0 0 1em 1em;
@@ -179,9 +188,16 @@ iframe
 }
 
 #profile-menu {
+/*
 	float: left;
+*/
+/*
 	margin-left:-100%;
+*/
 	width: 11em;
+	top: 10em;
+	left: 0;
+	position:fixed;
 
 	background-color:$primary-colour;
 	border-radius: 0 1em 1em 0;

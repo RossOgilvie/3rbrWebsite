@@ -4,7 +4,7 @@ ROVER WEBSITE
 How to administer this website
 ------------------------------
 
-The website is designed to be easy to administer. The pages are either static, and the content can be editted directly in html, or the pages loads content automatically from files in specific folders. Additionially, common elements (such as the site header and nav bar) are stored as html snippets and then magically inserted into each pages as it is requested. This way sitewide changes are easy to maintain.
+The website is designed to be easy to administer. The pages are either static, and the content can be editted directly in html, or the pages loads content automatically from files in specific folders. Pages are assembled by a central file, builder.php, which combines common elements (such as the site header and nav bar html snippets) and content as it is requested. This way sitewide changes are easy to maintain. Magical htaccess mod_rewrite rules are used for nice urls.
 
 ### Dynamic Pages
 The profiles page (profile.php), the documents page (docs.php), and the gallery page (gallery.php) all load their content based on different folders. You should not have to edit these pages directly to add or remove stuff from the website.
@@ -36,20 +36,16 @@ Items listed on the docs.php page are drawn from documents folder. Additionally,
 		|->	April.pdf
 		\->	June.pdf
 
-Documents that are not in a subdirectory of the documents folder will not be shown. For example if there was another folder inside "Minutes 2012" it and its contents would not be shown. Likewise, if there was a douemtn directly in the "documents" folder, it would not be shown
+Documents that are not in a subdirectory of the documents folder will not be shown. For example if there was another folder inside "Minutes 2012" it and its contents would not be shown. Likewise, if there was a document directly in the "documents" folder, it would not be shown
 
 ### Dynamic Pages: Gallery
-This follows the same rules as the documents folder. Images must be in folders inside the "photos" directory. It doesn't check whether files in these folder are picures or not, so to avoid errors make sure these folders only contain pictures. This systes alows you to group photos together into albums, even though the gallery doesn't show the albums explicitly.
+This follows the same rules as the documents folder. Images must be in folders inside the "photos" directory. It doesn't check whether files in these folder are picures or not, so to avoid errors make sure these folders only contain pictures. This system alows you to group photos together into albums, even though the gallery doesn't show the albums explicitly.
 
 ### Static pages
-Some pages on the site are static. Specifically the about page (about.php) and the contact page (contact.php). Both pages are relatively straightforward, so should be easy to edit. The map on the about pages is a little tricky, but shouldn't need changing.
+Some pages on the site are static. Specifically the about page (about.php) and the contact page (contact.php). Both pages are relatively straightforward, so should be easy to edit. The map on the about pages is a little tricky, but shouldn't need changing. The calendar page (calendar.php) is an embedding of the secretary's google calendar. To change the calendar entries, use google calendars. 404.php is what shows when someone tries to go to a page that doesn't exist.
 
 ### Snippets
 There are three common snippets. "doctype-html-head.html" does some technically important things and also loads the website's theme. "site-header.html" is exactly what is sounds like, it has the website's heading and two logo pictures. "nav-menu.html" has a list of links to the pages of the website.
-
-
-### Others
-index.php is the default page for the website. It simply copies the calendar page. The calendar page (calendar.php) is an embedding of the secretary's google calendar. To change that contact, use google calendars. template.php is a page you can copy if you want to make a new page. It has only the things to make it look like all the other pages. In particular, you'll need to set the page title and add content. 404.php is what shows when someone tries to go to a page that doesn't exist.
 
 ### Configuration tricks
 The server is set up to assume that pages without a file extension should be given a .php extension. For example, going to yoursite.com/calendar shows the page yoursite.com/calendar.php . You can use this feature to make nicer looking urls.

@@ -18,7 +18,6 @@ DirectoryIndex calendar.php
 # Various rewrite rules.
 <IfModule mod_rewrite.c>
   RewriteEngine on
-  #RewriteBase /
 
   # Block access to "hidden" directories whose names begin with a period.
   RewriteRule "(^|/)\." - [F]

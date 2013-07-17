@@ -8,29 +8,19 @@ Options -Indexes
 # Follow symbolic links in this directory.
 Options +FollowSymLinks
 
-# Make Drupal handle any 404 errors.
+# Handle any 404 errors.
 ErrorDocument 404 /404.php
 
 # Set the default handler.
 DirectoryIndex calendar.php
 
+
 # Various rewrite rules.
 <IfModule mod_rewrite.c>
   RewriteEngine on
+  #RewriteBase /
 
-  # Block access to "hidden" directories whose names begin with a period. This
-  # includes directories used by version control systems such as Subversion or
-  # Git to store control files. Files whose names begin with a period, as well
-  # as the control files used by CVS, are protected by the FilesMatch directive
-  # above.
-  #
-  # NOTE: This only works when mod_rewrite is loaded. Without mod_rewrite, it is
-  # not possible to block access to entire directories from .htaccess, because
-  # <DirectoryMatch> is not allowed here.
-  #
-  # If you do not have mod_rewrite installed, you should remove these
-  # directories from your webroot or otherwise protect them from being
-  # downloaded.
+  # Block access to "hidden" directories whose names begin with a period.
   RewriteRule "(^|/)\." - [F]
 
   # To redirect all users to access the site WITHOUT the 'www.' prefix,
@@ -39,18 +29,22 @@ DirectoryIndex calendar.php
   RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   RewriteRule ^ http://%1%{REQUEST_URI} [L,R=301]
 
-  # Allow dropped .php
-  # If file is not a directory and that file.php exists, then match all and append .php
-  # Actually, directory listing is forbidden anyway, so don't worry if it's a folder
-  # RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME}\.php -f
-  RewriteRule ^(.*)$ $1.php
-  
   ## Move old pages to new ones so as not to break links
   RewriteRule aboutus$ /about [R=301]
   RewriteRule booted$ /profile [R=301]
   RewriteRule who$ /profile [R=301]
   RewriteRule node/116$ /docs [R=301]
+
+  # Allow dropped .php
+  # If file exists, then match all and append .php
+  RewriteCond %{REQUEST_FILENAME}\.php -f
+  RewriteRule ^(.*)$ $1.php 
+
+  # Take any page name (they end with php) and feed it into the builder page. Other things, like css and js, get a pass. Also, don't infinte loop
+  RewriteCond %{REQUEST_URI} php$
+  RewriteCond %{REQUEST_URI} !^/builder
+  RewriteRule ^(.*)$ /builder.php?page=$1 [L]
+
 
   # Rules to correctly serve gzip compressed CSS and JS files.
   # Requires both mod_rewrite and mod_headers to be enabled.

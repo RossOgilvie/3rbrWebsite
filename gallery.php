@@ -1,7 +1,3 @@
-<?php include("doctype-html-head.html"); ?>
-
-<title>Photo Gallery | 3rd Rose Bay Rovers</title>
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="js/lightbox.js"></script>
 <link href="css/lightbox.css" rel="stylesheet" />
@@ -42,10 +38,6 @@ if (is_dir($dir0) && $dh0 = opendir($dir0))
 	rsort($groups);
 }
 ?>
-</head>
-
-<body>
-<?php include("site-header.html"); ?>
 
 <div class="content center">
 <?php
@@ -94,5 +86,3 @@ function crop_correctly(img)
     newImg.src = img.attr("src");
 }
   </script>
-</body>
-</html>

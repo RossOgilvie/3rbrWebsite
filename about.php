@@ -1,11 +1,3 @@
-<?php include("doctype-html-head.html"); ?>
-
-<title>About Us | 3rd Rose Bay Rovers</title>
-</head>
-
-<body>
-<?php include("site-header.html"); ?>
-
 <div class="content">
 	<h2>About Us</h2>
 	
@@ -19,6 +11,3 @@
 	<iframe src="https://maps.google.com.au/maps?f=q&amp;hl=en&amp;geocode=&amp;q=3+vickery+ave,+rose+bay&amp;mrt=all&amp;ie=UTF8&amp;hq=&amp;hnear=3+Vickery+Ave,+Rose+Bay+New+South+Wales+2029&amp;t=m&amp;ll=-33.870701,151.265602&amp;spn=0.034207,0.054932&amp;z=14&amp;output=embed&amp;iwloc=near"></iframe>
 	</div>
 </div>
-
-</body>
-</html>

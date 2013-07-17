@@ -1,7 +1,3 @@
-<?php include("doctype-html-head.html"); ?>
-
-<title>Profiles | 3rd Rose Bay Rovers</title>
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/marked.js"></script>
 <script type="text/javascript">
@@ -94,10 +90,6 @@ if (is_dir($dir) && $dh = opendir($dir))
 sort($rovers);
 sort($booted);
 ?>
-</head>
-
-<body onload="check_url_hash();">
-<?php include("site-header.html"); ?>
 
 <div id="profile-box-wrapper">
 	<div id="profile-box">
@@ -135,6 +127,4 @@ if(count($booted) != 0)
 </ul>
 </div>
 
-
-</body>
-</html>
+<script type="text/javascript">check_url_hash();</script>

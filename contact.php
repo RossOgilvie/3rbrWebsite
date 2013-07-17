@@ -1,11 +1,3 @@
-<?php include("doctype-html-head.html"); ?>
-
-<title>Contact Us | 3rd Rose Bay Rovers</title>
-</head>
-
-<body>
-<?php include("site-header.html"); ?>
-
 <div class="content" style="text-align: left;">
 <h2>Contact Us</h2>
 	
@@ -48,5 +40,3 @@
 -->
 <a href="http://www.nsw.rovers.com.au/"><img src="images/rover_logo.png" height=150></a>
 </div>
-</body>
-</html>

@@ -1,7 +1,3 @@
-<?php include("doctype-html-head.html"); ?>
-
-<title>Documents | 3rd Rose Bay Rovers</title>
-
 <?php
 // Get the names of all rovers with a profile
 $groups=array();
@@ -36,10 +32,6 @@ if (is_dir($dir0) && $dh0 = opendir($dir0))
 	sort($groups);
 }
 ?>
-</head>
-
-<body>
-<?php include("site-header.html"); ?>
 
 <div class="content">
 <?php
@@ -55,5 +47,3 @@ foreach($groups as $group)
 }
 ?>
 </div>
-</body>
-</html>

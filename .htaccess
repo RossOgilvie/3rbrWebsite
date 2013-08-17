@@ -12,7 +12,7 @@ Options +FollowSymLinks
 ErrorDocument 404 /builder.php?page=404.php
 
 # Set the default handler.
-DirectoryIndex /builder.php?page=calendar.php
+DirectoryIndex builder.php?page=calendar.php
 
 
 # Various rewrite rules.

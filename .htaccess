@@ -42,7 +42,7 @@ DirectoryIndex /builder.php?page=calendar.php
   # Take any page name (they end with php) and feed it into the builder page. Other things, like css and js, get a pass. Also, don't infinte loop
   RewriteCond %{REQUEST_URI} php$
   RewriteCond %{REQUEST_URI} !builder
-  RewriteRule ^(.*)$ /builder.php?page=$1 [R]
+  RewriteRule ^(.*)$ /builder.php?page=$1
 
 
   # Rules to correctly serve gzip compressed CSS and JS files.

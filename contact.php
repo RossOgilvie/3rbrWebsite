@@ -6,28 +6,33 @@
 <h2>Crew Committee</h2>
 
 <p><strong>Crew Leader</strong> <br />
-<a href="profile#Cecilia Jackson">Cecilia Jackson</a>: crewleader@rosebayrovers.org.au</p>
+<a href="profile#James Wallace">James Wallace</a>: 
+crewleader@rosebayrovers.org.au</p>
 
 <p><strong>Rover Advisor</strong> <br />
-<a href="profile#Phil Wicks">Phil Wicks</a>: ra@rosebayrovers.org.au</p>
+<a href="profile#Phil Wicks">Phil Wicks</a>: 
+ra@rosebayrovers.org.au</p>
 
 <p><strong>Secretary</strong> <br />
-<a href="profile#James Wallace">James Wallace</a>: 3rbrsecretary@gmail.com</p>
+<a href="profile#Lauren Scott">Lauren Scott</a>: 
+3rbrsecretary@gmail.com</p>
 
 <p><strong>Treasurer</strong> <br />
-<a href="profile#Ayla Jones">Ayla Jones</a>: treasurer@rosebayrovers.org.au</p>
+<a href="profile#Ross Ogilvie">Ross Ogilvie</a>: 
+treasurer@rosebayrovers.org.au</p>
 
 <p><strong>Quartermaster</strong> <br />
-<a href="profile#Ross Ogilvie">Ross Ogilvie</a>: quartermaster@rosebayrovers.org.au</p>
+quartermaster@rosebayrovers.org.au</p>
 
 <p><strong>Service Co-ordinator</strong> <br />
-<a href="profile#Lauren Scott">Lauren Scott</a>: service@rosebayrovers.org.au</p>
+<a href="profile#Kimberley Brewster">Kimberley Brewster</a>: 
+service@rosebayrovers.org.au</p>
 
 <p><strong>Venturer Liaisons</strong> <br />
-<a href="profile#Ross Ogilvie">Ross Ogilvie</a> (WP), <a href="profile#Tristan McGrath">Tristan McGrath</a> (C), <a href="profile#Sarah Robinson">Sarah Robinson</a> (KV), <a href="profile#David Politzer">David Politzer</a> (RB), <a href="profile#Ayla Jones">Ayla Jones</a> (Dr):<br /> venturer@rosebayrovers.org.au</p>
+<a href="profile#Ross Ogilvie">Ross Ogilvie</a> and <a href="profile#David Politzer">David Politzer</a><br /> venturer@rosebayrovers.org.au</p>
 
 <p><strong>RRC Representatives</strong> <br />
-<a href="profile#Lauren Scott">Lauren Scott</a> and <a href="profile#Tristan McGrath">Tristan McGrath</a></p>
+<a href="profile#Cecilia Jackson">Cecilia Jackson</a> and <a href="profile#Tristan McGrath">Tristan McGrath</a></p>
 
 <p><strong>Webmaster</strong><br />
 <a href="profile#Ross Ogilvie">Ross Ogilvie</a> with <a href="profile#James Wallace">James Wallace</a> as assistant: webmaster@rosebayrovers.org.au</p>

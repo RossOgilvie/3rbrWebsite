@@ -22,6 +22,7 @@ ra@rosebayrovers.org.au</p>
 treasurer@rosebayrovers.org.au</p>
 
 <p><strong>Quartermaster</strong> <br />
+<a href="profile#Tristan McGrath">Tristan McGrath</a>: 
 quartermaster@rosebayrovers.org.au</p>
 
 <p><strong>Service Co-ordinator</strong> <br />

@@ -5,14 +5,14 @@
 <script src="js/jquery.lazyload.js" type="text/javascript"></script>
 
 <?php
-// Get the names of all rovers with a profile
+// Get all the photos
 $groups=array();
 $pics=array();
-$dir0 = "photos/";  
-// Open a known directory, and proceed to read its contents  
-if (is_dir($dir0) && $dh0 = opendir($dir0))  
-{  
-	while (($dir1 = readdir($dh0)) !== false)  
+$dir0 = "photos/";
+// Open a known directory, and proceed to read its contents
+if (is_dir($dir0) && $dh0 = opendir($dir0))
+{
+	while (($dir1 = readdir($dh0)) !== false)
 	{
 		//for all the nontrivial folders in it, loop through their files
 		if(is_dir($dir0."/".$dir1) && $dir1[0] != "." && $dh1 = opendir($dir0."/".$dir1))
@@ -21,19 +21,19 @@ if (is_dir($dir0) && $dh0 = opendir($dir0))
 			$groups[] = $dir1;
 			//prep an array to hold all the files belonging to this group
 			$pics[$dir1]=array();
-			while (($file = readdir($dh1)) !== false)  
+			while (($file = readdir($dh1)) !== false)
 			{
 				//again filter the crap files
 				if($file[0] != ".")
 				{
-					//add the real files to the list of docs, indexed by their group
+					//add the real files to the list of pics, indexed by their group
 					$pics[$dir1][] = $file;
 				}
 			}
 			closedir($dh1);
 			sort($pics[$dir1]);
 		}
-	}  
+	}
 	closedir($dh0);
 	rsort($groups);
 }
@@ -41,6 +41,25 @@ if (is_dir($dir0) && $dh0 = opendir($dir0))
 
 <div class="content center">
 <?php
+// FACEBOOK PHOTOS
+// Make the query, with app api tied to ross' facebook
+$photoQuery = urlencode('SELECT src_big FROM photo WHERE aid IN ( SELECT aid  FROM album  WHERE owner =  156755564335433)');
+$photoFQL = 'https://api.facebook.com/method/fql.query?query='.$photoQuery .'&access_token=151333008339356|6b6cbbca6b2d6ec5766a5b46b4d08ad4&format=json';
+// get all the photos as json
+$photoResults = file_get_contents($photoFQL);
+// decode json into php array
+$decoded = json_decode($photoResults, true);
+// loop through all the photos
+foreach ($decoded as $photo) {
+// grab the url from the rather trivial, singleton array
+$pic_src = $photo["src_big"];
+//inject into the page
+echo "<div class='gallery-pic'><a href='$pic_src' rel='lightbox[all]'><img src='images/grey.gif' data-original='$pic_src' class='gallery-pic' alt='thumbnail' /></a></div>\n";
+}
+?>
+
+<?php
+// LOCAL PHOTOS
 foreach($groups as $group)
 {
 	foreach($pics[$group] as $pic)
@@ -67,7 +86,7 @@ function crop_correctly(img)
 		var ratio = height/width;
 		// we only want to do this when we load the real image, not the placeholder
 		if(img.attr("src")!="images/grey.gif")
-			if(height >= width) 
+			if(height >= width)
 			{
 				img.css("width","200px");
 				img.css("height",Math.round(200*ratio) + "px");

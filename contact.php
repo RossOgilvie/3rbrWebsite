@@ -1,42 +1,36 @@
 <div class="content" style="text-align: left;">
 <h2>Contact Us</h2>
-	
+
 <p>If you would like to join, or just have a question, please send us an email at 3rbrsecretary@gmail.com</p>
-	
+
 <h2>Crew Committee</h2>
 
 <p><strong>Crew Leader</strong> <br />
-<a href="profile#James Wallace">James Wallace</a>: 
-crewleader@rosebayrovers.org.au</p>
+James Wallace: crewleader@rosebayrovers.org.au</p>
 
 <p><strong>Rover Advisor</strong> <br />
-<a href="profile#Phil Wicks">Phil Wicks</a>: 
-ra@rosebayrovers.org.au</p>
+Phil Wicks: ra@rosebayrovers.org.au</p>
 
 <p><strong>Secretary</strong> <br />
-<a href="profile#Lauren Scott">Lauren Scott</a>: 
-3rbrsecretary@gmail.com</p>
+Lauren Scott: 3rbrsecretary@gmail.com</p>
 
 <p><strong>Treasurer</strong> <br />
-<a href="profile#Ross Ogilvie">Ross Ogilvie</a>: 
-treasurer@rosebayrovers.org.au</p>
+Ross Ogilvie: treasurer@rosebayrovers.org.au</p>
 
 <p><strong>Quartermaster</strong> <br />
-<a href="profile#Tristan McGrath">Tristan McGrath</a>: 
-quartermaster@rosebayrovers.org.au</p>
+Tristan McGrath: quartermaster@rosebayrovers.org.au</p>
 
 <p><strong>Service Co-ordinator</strong> <br />
-<a href="profile#Kimberley Brewster">Kimberley Brewster</a>: 
-service@rosebayrovers.org.au</p>
+Kimberley Brewster: service@rosebayrovers.org.au</p>
 
 <p><strong>Venturer Liaisons</strong> <br />
-<a href="profile#Ross Ogilvie">Ross Ogilvie</a> and <a href="profile#David Politzer">David Politzer</a><br /> venturer@rosebayrovers.org.au</p>
+Ross Ogilvie and David Politzer: venturer@rosebayrovers.org.au</p>
 
 <p><strong>RRC Representatives</strong> <br />
-<a href="profile#Cecilia Jackson">Cecilia Jackson</a> and <a href="profile#Tristan McGrath">Tristan McGrath</a></p>
+Cecilia Jackson and Tristan McGrath</p>
 
 <p><strong>Webmaster</strong><br />
-<a href="profile#Ross Ogilvie">Ross Ogilvie</a> with <a href="profile#James Wallace">James Wallace</a> as assistant: webmaster@rosebayrovers.org.au</p>
+Ross Ogilvie with James Wallace assisting: webmaster@rosebayrovers.org.au</p>
 
 <h2>Other Rover Crews in the Area</h2>
 <a href="http://abbotsfordrovers.org.au"><img src="images/abbotsford_crew_logo.jpg" height=150></a>

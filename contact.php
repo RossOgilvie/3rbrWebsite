@@ -14,7 +14,7 @@
 <script type="text/javascript">
 function load_contacts()
 {
-$.get("contact.md", function(contact_content)
+$.get("contact.txt", function(contact_content)
 {
 	//if we succeed, parse it as markdown, and load it into "#contact"
 	$('#contact').html(marked(contact_content));

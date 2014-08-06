@@ -1,24 +1,24 @@
 <script type="text/javascript" src="js/marked.js"></script>
 <script type="text/javascript">
-//detect hash change and then 
+//detect hash change and then
 $(window).bind('hashchange', check_url_hash);
 
 //This strips out the name after the hash from the url
 function check_url_hash() {
 	var hash = window.location.hash.slice(1); //hash to string (= "User Name")
 	switch_profile(hash);
-}    
-    
+}
+
 //This function switches between different rover's profiles based on their name
 function switch_profile(name)
 {
 	// have cool nickname translation
 	var nicknames = {Awesome:"Ross Ogilvie", awesome:"Ross Ogilvie", lammy:"Lauren Scott"};
 	if(name in nicknames) name = nicknames[name];
-	
+
 	// Some profiles have names like Nick Wolf.booted.profile. Try to match an ordinary type, then fall back to the other types
 	var profile_path="";
-	
+
 	if(url_exists('profiles/' + name + '.profile'))
 		profile_path='profiles/' + name;
 	else if(url_exists('profiles/' + name + '.booted.profile'))
@@ -28,7 +28,7 @@ function switch_profile(name)
 	else
 		//if there is no such profile, say so
 		$('#profile-bio').html("No such profile :(");
-		
+
 
 	// retrieve the file at "profile_path.profile" = "profile/Ross Ogilvie.profile"
 	// the $.now() bit is to make unique requests and avoid caching
@@ -40,7 +40,7 @@ function switch_profile(name)
 
 		//hide any pic that may be there presently
 		$('#profile-pic-img').css('display','none');
-		
+
 		// We look for profile pics with the following exts, listed in order of preference
 		var profile_pic_exts=[".png",".jpg"];
 		for(var i = 0; i < profile_pic_exts.length; i++) {
@@ -53,7 +53,7 @@ function switch_profile(name)
 				break;
 			}
 		}
-	});
+	}, "text");
 }
 
 //tests whether a given file exists. Can fail is the server gives soft 404s
@@ -70,19 +70,19 @@ function url_exists(url)
 // Get the names of all rovers with a profile
 $rovers=array();
 $booted=array();
-$dir = "profiles/";  
-// Open a known directory, and proceed to read its contents  
-if (is_dir($dir) && $dh = opendir($dir))  
-{  
-	while (($file = readdir($dh)) !== false)  
+$dir = "profiles/";
+// Open a known directory, and proceed to read its contents
+if (is_dir($dir) && $dh = opendir($dir))
+{
+	while (($file = readdir($dh)) !== false)
 	{
 		$parts = explode(".",$file);
 		if(count($parts)==2 && $parts[1]=="profile")
 				$rovers[] = $parts[0];
 		if(count($parts)==3 && $parts[1]=="booted" && $parts[2]=="profile") //booted rovers
 			$booted[] = $parts[0];
-	}  
-	closedir($dh);  
+	}
+	closedir($dh);
 }
 
 //Sort the names

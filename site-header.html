@@ -4,3 +4,28 @@
 <h1>3rd Rose Bay Judean Rovers</h1>
 <?php include("nav-menu.html"); ?>
 </div>
+
+<script>
+var big=true;
+// $(window).resize(function(){
+function change_size() {
+var windowsize = $(window).innerWidth();
+if (windowsize < 720 && big) {
+  $("#nav-menu select").show();
+  $("#nav-menu ul").hide();
+  $("#site-header h1").hide();
+  $("#rover-logo").hide();
+  $("#crew-logo").css("float","none");
+  big=false;
+} else if(windowsize >= 720 && !big) {
+  $("#nav-menu select").hide();
+  $("#nav-menu ul").show();
+  $("#site-header h1").show();
+  $("#rover-logo").show();
+  $("#crew-logo").css("float","left");
+  big=true;
+}
+}
+// });
+setInterval(change_size, 500);
+</script>

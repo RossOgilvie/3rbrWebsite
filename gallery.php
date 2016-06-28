@@ -43,18 +43,26 @@ if (is_dir($dir0) && $dh0 = opendir($dir0))
 <?php
 // FACEBOOK PHOTOS
 // Make the query, with app api tied to ross' facebook
-$photoQuery = urlencode('SELECT src_big FROM photo WHERE aid IN ( SELECT aid  FROM album  WHERE owner =  156755564335433)');
-$photoFQL = 'https://api.facebook.com/method/fql.query?query='.$photoQuery .'&access_token=151333008339356|6b6cbbca6b2d6ec5766a5b46b4d08ad4&format=json';
+$baseUrl = 'https://graph.facebook.com/v2.6/156755564335433';
+$query = 'fields=albums.fields(photos.fields(source))';
+$access = 'access_token=151333008339356|6b6cbbca6b2d6ec5766a5b46b4d08ad4';
+$photosUrl = $baseUrl . '?' . $query . '&' . $access;
 // get all the photos as json
-$photoResults = file_get_contents($photoFQL);
+$photoResults = file_get_contents($photosUrl);
 // decode json into php array
 $decoded = json_decode($photoResults, true);
-// loop through all the photos
-foreach ($decoded as $photo) {
-// grab the url from the rather trivial, singleton array
-$pic_src = $photo["src_big"];
-//inject into the page
-echo "<div class='gallery-pic'><a href='$pic_src' rel='lightbox[all]'><img src='images/grey.gif' data-original='$pic_src' class='gallery-pic' alt='thumbnail' /></a></div>\n";
+//strip off some cruft
+$albums = $decoded["albums"]["data"];
+
+// loop through all the albums
+foreach ($albums as $album) {
+	//loop through the photos in each album
+	foreach ($album["photos"]["data"] as $photo) {
+	// grab the url from the array
+	$photoSrc = $photo["source"];
+	//inject into the page
+	echo "<div class='gallery-pic'><a href='$photoSrc' rel='lightbox[all]'><img src='images/grey.gif' data-original='$photoSrc' class='gallery-pic' alt='thumbnail' /></a></div>\n";
+	}
 }
 ?>
 

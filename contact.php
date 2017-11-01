@@ -1,25 +1,5 @@
 <div class="content" style="text-align: left;">
-<div id="contact"></div>
-
-<h2>Other Rover Crews in the Area</h2>
-<a href="http://abbotsfordrovers.org.au"><img src="images/abbotsford_crew_logo.jpg" height=150></a>
-<a href="http://coogeerovers.org.au"><img src="images/coogee_crew_logo.png" height=150></a>
-<!--
-<a href="http://rosebayrovers.org.au"><img src="images/rosebay_crew_logo.png" height=150></a>
--->
-<a href="http://www.nsw.rovers.com.au/"><img src="images/rover_logo.png" height=150></a>
+<div id="contact">
+<h2>Contact Us</h2>
+If you would like to join, or just have a question, please send us an email at <a href="mailto:ross@rossogilvie.id.au">ross@rossogilvie.id.au</a>. If you have an enquiry regarding hiring the hall, please contact the region office at <a href="mailto:sm.region@nsw.scouts.com.au">sm.region@nsw.scouts.com.au</a>.
 </div>
-
-<script type="text/javascript" src="js/marked.js"></script>
-<script type="text/javascript">
-function load_contacts()
-{
-$.get("contact.txt", function(contact_content)
-{
-	//if we succeed, parse it as markdown, and load it into "#contact"
-	$('#contact').html(marked(contact_content));
-}, "text");
-}
-
-$(document).ready(load_contacts)
-</script>

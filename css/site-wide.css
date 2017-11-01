@@ -1,2 +1,195 @@
-@import "http://fonts.googleapis.com/css?family=Cinzel:700";html{border:0;margin:0;padding:0;height:100%}body{border:0;margin:0;height:100%}*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}:focus{outline:0}sup{vertical-align:baseline;position:relative;top:-0.4em}h1{font-family:'Cinzel', serif}h2,h3,body{font-family:Verdana, sans-serif}a,a:visited{color:#000;text-decoration:underline}a:hover{text-decoration:underline}iframe{border:0;margin:0;padding:0;width:100%;height:100%}.content{width:80%;margin-left:auto;margin-right:auto;text-align:justify}.embedded-map{width:640px;height:480px;margin:0 auto}#calendar-container,#docs-container{width:100%;height:600px;text-align:center}.center{text-align:center}#site-header{background-color:#4B98EB;border-radius:0 0 1em 1em;width:100%;text-align:center}#site-header h1{margin:0;padding-top:0.5em;color:#FFFFFF}#crew-logo{float:left;height:80px;margin-left:1em}#rover-logo{float:right;height:80px;margin-right:1em}#nav-menu{padding:0.5em;margin-bottom:0em}#nav-menu ul{list-style-type:none;margin:0;padding:0}#nav-menu li{display:inline-block}#nav-menu a,#nav-menu a:visited{color:#fff;text-decoration:none}#nav-menu a:hover{text-decoration:underline}#nav-menu a:link,#nav-menu a:visited{display:block;padding:0.5em}#profile-box-wrapper{float:left;width:100%}#profile-box{margin-left:11.5em;padding:0.5em}#profile-menu{width:11em;top:10em;left:0;position:fixed;background-color:#4B98EB;border-radius:0 1em 1em 0;padding:1em}#profile-menu ul{float:left;list-style-type:none;margin:0;padding:0}#profile-menu a{display:block;padding:0.5em;cursor:pointer}#profile-menu a,#profile-menu a:visited{color:#fff;text-decoration:none}#profile-menu a:hover{text-decoration:underline}#profile-pic{float:right;width:15em;margin-top:1em;margin-left:0.5em}#profile-pic-img{display:none;width:100%}div.gallery-pic{height:200px;width:200px;overflow:hidden;text-align:center;display:inline-block;margin:0.25em}#nav-menu select{display:none}
+@import "http://fonts.googleapis.com/css?family=Cinzel:700";
+/*
+>>>>>>>>>>>>> HACKS
+*/
+html {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+body {
+  border: 0;
+  margin: 0;
+  height: 100%; }
+
+/*
+use sane css boxing model
+*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*
+get rid of outline boxes after selecting an element. technically has bad accessibility implications
+*/
+:focus {
+  outline: 0; }
+
+/*
+tweaks for superscripts
+*/
+sup {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em; }
+
+/*
+>>>>>>>>>>>>>>>> MIXINS && GLOBALS
+*/
+/*
+>>>>>>>>>>>>> SITEWIDE
+*/
+h1 {
+  font-family: 'Cinzel', serif; }
+
+h2, h3, body {
+  font-family: Verdana, sans-serif; }
+
+a, a:visited {
+  color: black;
+  text-decoration: underline; }
+a:hover {
+  text-decoration: underline; }
+
+iframe {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+.content {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify; }
+
+.embedded-map {
+  width: 640px;
+  height: 480px;
+  margin: 0 auto; }
+
+#calendar-container, #docs-container {
+  width: 100%;
+  height: 600px;
+  text-align: center; }
+
+.center {
+  text-align: center; }
+
+/*
+>>>>>>>>>>>>> SITE HEADER
+*/
+#site-header {
+  background-color: #7F0000;
+  border-radius: 0 0 1em 1em;
+  width: 100%;
+  text-align: center; }
+  #site-header h1 {
+    margin: 0;
+    padding-top: 0.5em;
+    color: #FFFFFF; }
+
+#unit-logo {
+  float: left;
+  height: 80px;
+  margin-left: 1em; }
+
+#scouts-logo {
+  float: right;
+  height: 80px;
+  margin-right: 1em; }
+
+#nav-menu {
+  padding: 0.5em;
+  margin-bottom: 0em;
+  /*
+      background-color: $primary-colour;
+      border-radius: 0 0 1em 1em;
+      width: 100%;
+  */ }
+  #nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  #nav-menu li {
+    display: inline-block; }
+  #nav-menu a, #nav-menu a:visited {
+    color: #FFFFFF;
+    text-decoration: none; }
+  #nav-menu a:hover {
+    text-decoration: underline; }
+  #nav-menu a:link, #nav-menu a:visited {
+    display: block;
+    padding: 0.5em; }
+
+/*
+>>>>>>>>>>>>> PROFILES
+*/
+#profile-box-wrapper {
+  float: left;
+  width: 100%; }
+
+#profile-box {
+  margin-left: 11.5em;
+  padding: 0.5em; }
+
+#profile-menu {
+  /*
+  	float: left;
+  */
+  /*
+  	margin-left:-100%;
+  */
+  width: 11em;
+  top: 10em;
+  left: 0;
+  position: fixed;
+  background-color: #7F0000;
+  border-radius: 0 1em 1em 0;
+  padding: 1em; }
+  #profile-menu ul {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  #profile-menu a {
+    display: block;
+    padding: 0.5em;
+    cursor: pointer; }
+    #profile-menu a, #profile-menu a:visited {
+      color: white;
+      text-decoration: none; }
+    #profile-menu a:hover {
+      text-decoration: underline; }
+
+#profile-pic {
+  float: right;
+  width: 15em;
+  margin-top: 1em;
+  margin-left: 0.5em; }
+
+#profile-pic-img {
+  display: none;
+  width: 100%; }
+
+/*
+>>>>>>>>>>>>> GALLERY
+*/
+div.gallery-pic {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  text-align: center;
+  display: inline-block;
+  margin: 0.25em; }
+
+/*
+>>>>>>>>>>>>>>>> Dual Menu Shenagins
+*/
+#nav-menu select {
+  display: none; }
+
 /*# sourceMappingURL=site-wide.css.map */

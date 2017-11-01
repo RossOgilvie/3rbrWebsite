@@ -1,6 +1,6 @@
 <?php include("doctype-html-head.html"); ?>
 
-<title>3rd Rose Bay Rovers</title>
+<title>Kingsford Venturers</title>
 </head>
 
 <body>

@@ -42,7 +42,7 @@ sup {
 >>>>>>>>>>>>>>>> MIXINS && GLOBALS
 */
 
-$primary-colour: #4B98EB;
+$primary-colour: #7F0000;
 
 @mixin links($color, $decoration-normal, $decoration-hover)
 {
@@ -125,13 +125,13 @@ iframe
 	}
 }
 
-#crew-logo {
+#unit-logo {
 	float: left;
 	height: 80px;
 	margin-left: 1em;
 }
 
-#rover-logo {
+#scouts-logo {
 	float: right;
 	height: 80px;
 	margin-right: 1em;
